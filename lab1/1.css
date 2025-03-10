@@ -220,6 +220,10 @@ button:hover {
         gap: 15px;
     }
 
+     #header{
+        font-size: 15px;
+    }
+
     section {
         padding: 1.5rem;
     }
