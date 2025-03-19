@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveNow</title>
+    <link id="icon" rel="icon" type="image/jpeg" href="./logo/Знімок екрана 2025-03-09 215354.png">
+    <link rel="stylesheet" href="./1.css">
+</head>
+<body>
+    <!-- Навігаційне меню --------------------------------------------------------------------->
+    <header>
+        <h1 id="header">Платформа оренди автомобілів <p id="name">DriveNow</p></h1>
+        <nav>
+            <ul>
+                <li><label for="tab1">Автомобілі</label></li>
+                <li><label for="tab5">Про автомобілі</label></li>
+                <li><label for="tab2">Мої бронювання</label></li>
+                <li><label for="tab3">Про нас</label></li>
+                <li><label for="tab4">Вхід/Реєстрація</label></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Перемикання між розділами через радіокнопки ------------------------------------------>
+    <input type="radio" id="tab1" name="tabs" checked>
+    <input type="radio" id="tab2" name="tabs">
+    <input type="radio" id="tab3" name="tabs">
+    <input type="radio" id="tab4" name="tabs">
+    <input type="radio" id="tab5" name="tabs">
+
+    <!-- Розділ "Автомобілі" ------------------------------------------------------------------>
+    <section id="cars">
+        <h1>Доступні автомобілі для оренди</h1>
+        <div class="cars-grid">
+            <!-- Карта автомобіля -->
+            <div class="car-card" id="car1">
+                <h2>Toyota Corolla</h2>
+                <img class="img" src="https://cdn3.riastatic.com/photosnew/auto/photo/toyota_corolla__574644813f.jpg" alt="Foto 'Toyota Corolla'">
+                <p>Ціна: $50/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 3</p>
+                <button onclick="switchToAboutCarsTab('car1Details')" class="more-info">Детальніше</button>
+            </div>
+            
+            <div id="car2" class="car-card">
+                <h2>Toyota Camry</h2>
+                <img class="img" src="https://bin.ua/uploads/posts/2023-11/1700063410_2.jpg" alt="Foto 'Toyota Camry'">
+                <p>Ціна: $150/доба</p>
+                <p>Трансмісія: Механіка</p>
+                <p>Доступно: 3</p>
+                <button onclick="switchToAboutCarsTab('car2Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car3" class="car-card">
+                <h2>Toyota Highlander</h2>
+                <img class="img" src="https://megarent.ua/uploads/cars/466-1.png" alt="Foto 'Toyota Highlande'">
+                <p>Ціна: $180/доба</p>
+                <p>Трансмісія: Механіка</p>
+                <p>Доступно: 4</p>
+                <button onclick="switchToAboutCarsTab('car3Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car4" class="car-card">
+                <h2>BMW X5</h2>
+                <img class="img" src="https://media.ed.edmunds-media.com/bmw/x5/2025/oem/2025_bmw_x5_4dr-suv_xdrive40i_fq_oem_1_1600.jpg" alt="Foto 'BMW X5'">
+                <p>Ціна: $100/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 2</p>
+                <button onclick="switchToAboutCarsTab('car4Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car5" class="car-card">
+                <h2>BMW 3 Series</h2>
+                <img class="img" src="https://www.topgear.com/sites/default/files/2022/09/1-BMW-3-Series.jpg" alt="Foto 'BMW 3 Series'">
+                <p>Ціна: $220/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 2</p>
+                <button onclick="switchToAboutCarsTab('car5Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car6" class="car-card">
+                <h2>Ford Focus</h2>
+                <img class="img" src="https://cdn.riastatic.com/photosnew/auto/photo/Ford_Focus__474166111f.jpg" alt="Foto 'Ford Focus'">
+                <p>Ціна: $40/доба</p>
+                <p>Трансмісія: Механіка</p>
+                <p>Доступно: 5</p>
+                <button onclick="switchToAboutCarsTab('car6Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car7" class="car-card">
+                <h2>Ford Mustang</h2>
+                <img class="img" src="https://www.topgear.com/sites/default/files/cars-car/image/2024/12/54196859052_9249719e93_o.jpg?w=1280&h=720" alt="Foto 'Ford Mustang'">
+                <p>Ціна: $150/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 1</p>
+                <button onclick="switchToAboutCarsTab('car7Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car8" class="car-card">
+                <h2>Ford F-150</h2>
+                <img class="img" src="https://nextcar.ua/images/blog/579/F-150-Lightning-Flash-1.jpg" alt="Foto 'Ford F-150'">
+                <p>Ціна: $180/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 3</p>
+                <button onclick="switchToAboutCarsTab('car8Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car9" class="car-card">
+                <h2>Tesla Model S</h2>
+                <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/2021_Tesla_Model_S_P2_Long_Range_front_right_view.jpg/800px-2021_Tesla_Model_S_P2_Long_Range_front_right_view.jpg" alt="Foto 'Tesla Model S'">
+                <p>Ціна: $200/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 2</p>
+                <button onclick="switchToAboutCarsTab('car9Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car10" class="car-card">
+                <h2>Audi Q7</h2>
+                <img class="img" src="https://i.infocar.ua/i/12/442/1400x936.jpg" alt="Foto 'Audi Q7'">
+                <p>Ціна: $180/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 3</p>
+                <button onclick="switchToAboutCarsTab('car10Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car11" class="car-card">
+                <h2>Audi A4</h2>
+                <img class="img" src="https://cdn.riastatic.com/photosnew/auto/photo/Audi_A4__567333331f.jpg" alt="Foto 'Audi A4'">
+                <p>Ціна: $180/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 4</p>
+                <button onclick="switchToAboutCarsTab('car11Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car12" class="car-card">
+                <h2>Nissan Rogue</h2>
+                <img class="img" src="https://di-uploads-pod40.dealerinspire.com/nissanofjeffersoncity/uploads/2022/02/2022-nissan-rogue-suv-blue.png" alt="Foto 'Nissan Rogue'">
+                <p>Ціна: $130/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 3</p>
+                <button onclick="switchToAboutCarsTab('car12Details')" class="more-info">Детальніше</button>
+            </div>
+            
+            <div id="car13" class="car-card">
+                <h2>Chevrolet Camaro</h2>
+                <img class="img" src="https://i.infocar.ua/i/12/5759/1200x800.jpg" alt="Chevrolet Camaro">
+                <p>Ціна: $220/доба</p>
+                <p>Трансмісія: Механіка</p>
+                <p>Доступно: 3</p>
+                <button onclick="switchToAboutCarsTab('car13Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car14" class="car-card">
+                <h2>Chevrolet Malibu</h2>
+                <img class="img" src="https://i.infocar.ua/i/2/4676/102138/1920x.jpg" alt="Foto 'Chevrolet Malibu'">
+                <p>Ціна: $170/доба</p>
+                <p>Трансмісія: Механіка</p>
+                <p>Доступно: 4</p>
+                <button onclick="switchToAboutCarsTab('car14Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car15" class="car-card">
+                <h2>Porsche 911</h2>
+                <img class="img" src="https://i.infocar.ua/i/2/7145/134665/1920x.jpg" alt="Foto 'Porsche 911'">
+                <p>Ціна: $350/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 2</p>
+                <button onclick="switchToAboutCarsTab('car15Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car16" class="car-card">
+                <h2>Lexus RX 350</h2>
+                <img class="img" src="https://media.ed.edmunds-media.com/lexus/rx/2025/oem/2025_lexus_rx_4dr-suv_350-f-sport-handling_fq_oem_1_1600.jpg" alt="Foto 'Lexus RX 350'">
+                <p>Ціна: $250/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 5</p>
+                <button onclick="switchToAboutCarsTab('car16Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car17" class="car-card">
+                <h2>Hyundai Sonata</h2>
+                <img class="img" src="https://toprent.ua/wp-content/uploads/2023/10/Hyundai-Sonata-LPG-TopRent.UA-3.jpg" alt="Foto 'Hyundai Sonata'">
+                <p>Ціна: $140/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 6</p>
+                <button onclick="switchToAboutCarsTab('car17Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car18" class="car-card">
+                <h2>Subaru Outback</h2>
+                <img class="img" src="https://i.infocar.ua/i/12/5454/1400x936.jpg" alt="Foto 'Subaru Outback'">
+                <p>Ціна: $180/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 4</p>
+                <button onclick="switchToAboutCarsTab('car18Details')" class="more-info">Детальніше</button>
+            </div>
+            
+            <div id="car19" class="car-card">
+                <h2>Mercedes-Benz E-Class</h2>
+                <img class="img" src="https://img.mercedes-benz-kiev.com/data/lineup/mercedes-benz-e-class-w214/mercedes-benz-e-class-w214-1.jpg" alt="Foto 'Mercedes-Benz E-Class'">
+                <p>Ціна: $270/доба</p>
+                <p>Трансмісія: Автомат</p>
+                <p>Доступно: 3</p>
+                <button onclick="switchToAboutCarsTab('car19Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car20" class="car-card">
+                <h2>Volkswagen Golf</h2>
+                <img class="img" src="https://ionity.ua/wp-content/uploads/2024/02/volkswagen-golf-2024-restyling-foto-768x432.jpg" alt="Foto 'Volkswagen Golf'">
+                <p>Ціна: $130/доба</p>
+                <p>Трансмісія: Механіка</p>
+                <p>Доступно: 5</p>
+                <button onclick="switchToAboutCarsTab('car20Details')" class="more-info">Детальніше</button>
+            </div>
+
+            <div id="car21" class="car-card">
+                <h2>Honda Civic</h2>
+                <img class="img" src="https://topgir.com.ua/wp-content/uploads/2019/03/honda-civic-type-r_0.jpg" alt="Foto 'Honda Civic'">
+                <p>Ціна: $140/доба</p>
+                <p>Трансмісія: Механіка</p>
+                <p>Доступно: 6</p>
+                <button onclick="switchToAboutCarsTab('car21Details')" class="more-info">Детальніше</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Розділ "Про автомобіль" -->
+    <section id="car-details">
+    <h1>Інформація про автомобіль</h1>
+    <div id="car1Details" class="car-info">
+        <h2>Toyota Corolla</h2>
+        <img src="https://cdn3.riastatic.com/photosnew/auto/photo/toyota_corolla__574644813f.jpg" alt="Toyota Corolla">
+        <p><strong>Ціна:</strong> $50/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> 1.8L I4</p>
+        <p><strong>Витрата пального:</strong> 6.5 л/100 км</p>
+        <p><strong>Максимальна швидкість:</strong> 180 км/год</p>
+        <p><strong>Доступно:</strong> 3 авто</p>
+        <p><strong>Особливості:</strong> Toyota Corolla — це компактний автомобіль, що поєднує в собі економічність, комфорт та високу надійність. Автоматична трансмісія забезпечує легке керування, а низький рівень витрати пального робить Corolla ідеальним вибором для повсякденних поїздок.</p>
+        <button class="book-btn" onclick="bookCar('Toyota Corolla')">Забронювати</button>
+
+    </div>
+    
+    <div id="car2Details" class="car-info">
+        <h2>Toyota Camry</h2>
+        <img src="https://bin.ua/uploads/posts/2023-11/1700063410_2.jpg" alt="Toyota Camry">
+        <p><strong>Ціна:</strong> $150/доба</p>
+        <p><strong>Трансмісія:</strong> Механіка</p>
+        <p><strong>Двигун:</strong> 2.5L I4</p>
+        <p><strong>Витрата пального:</strong> 7.1 л/100 км</p>
+        <p><strong>Максимальна швидкість:</strong> 210 км/год</p>
+        <p><strong>Доступно:</strong> 3 авто</p>
+        <p><strong>Особливості:</strong> Toyota Camry — це середньорозмірний седан, що поєднує стиль, потужність та комфорт. Завдяки механічній трансмісії, Camry забезпечує відмінну керованість і контроль.</p>
+        <button class="book-btn" onclick="bookCar('Toyota Camry')">Забронювати</button>
+    </div>
+
+    <div id="car3Details" class="car-info">
+        <h2>Toyota Highlander</h2>
+        <img src="https://megarent.ua/uploads/cars/466-1.png" alt="Toyota Highlander">
+        <p><strong>Ціна:</strong> $180/доба</p>
+        <p><strong>Трансмісія:</strong> Механіка</p>
+        <p><strong>Двигун:</strong> 3.5L V6</p>
+        <p><strong>Витрата пального:</strong> 10.3 л/100 км</p>
+        <p><strong>Максимальна швидкість:</strong> 200 км/год</p>
+        <p><strong>Доступно:</strong> 4 авто</p>
+        <p><strong>Особливості:</strong> Toyota Highlander — це просторий кросовер, який поєднує в собі потужність двигуна та комфорт для великої родини. З його механічною трансмісією ви отримаєте повний контроль за водінням, а велика кількість місця забезпечує комфорт для кожного пасажира. Ідеально підходить для подорожей або активного відпочинку.</p>
+        <button class="book-btn" onclick="bookCar('Toyota Highlander')">Забронювати</button>
+    </div>
+
+    <div id="car4Details" class="car-info">
+        <h2>BMW X5</h2>
+        <img src="https://media.ed.edmunds-media.com/bmw/x5/2025/oem/2025_bmw_x5_4dr-suv_xdrive40i_fq_oem_1_1600.jpg" alt="BMW X5">
+        <p><strong>Ціна:</strong> $100/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> 3.0L I6</p>
+        <p><strong>Витрата пального:</strong> 11.2 л/100 км</p>
+        <p><strong>Максимальна швидкість:</strong> 250 км/год</p>
+        <p><strong>Доступно:</strong> 2 авто</p>
+        <p><strong>Особливості:</strong> BMW X5 — це розкішний позашляховик, який поєднує елегантний дизайн, потужний двигун і високий рівень комфорту. Він оснащений сучасними технологіями, що забезпечують комфорт і безпеку на дорозі. Автоматична трансмісія гарантує зручність при водінні, а потужний 3.0L двигун дозволяє впевнено долати будь-які перешкоди. Ідеально підходить для тих, хто цінує стиль і надійність у автомобілях.</p>
+        <button class="book-btn" onclick="bookCar('BMW X5')">Забронювати</button>
+    </div>
+
+    <div id="car5Details" class="car-info">
+        <h2>BMW 3 Series</h2>
+        <img src="https://www.topgear.com/sites/default/files/2022/09/1-BMW-3-Series.jpg" alt="BMW 3 Series">
+        <p><strong>Ціна:</strong> $220/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> 2.0L бензиновий</p>
+        <p><strong>Витрата пального:</strong> 7.0 л/100 км</p>
+        <p><strong>Місткість:</strong> 5 пасажирів</p>
+        <p><strong>Доступно:</strong> 2 авто</p>
+        <p><strong>Особливості:</strong> Спортивний седан, передові технології комфорту та безпеки, інтегрована система навігації та високий рівень керованості.</p>
+        <button class="book-btn" onclick="bookCar('BMW 3 Series')">Забронювати</button>
+    </div>
+
+    <div id="car6Details" class="car-info">
+        <h2>Ford Focus</h2>
+        <img src="https://cdn.riastatic.com/photosnew/auto/photo/Ford_Focus__474166111f.jpg" alt="Ford Focus">
+        <p><strong>Ціна:</strong> $40/доба</p>
+        <p><strong>Трансмісія:</strong> Механіка</p>
+        <p><strong>Двигун:</strong> 1.6L бензиновий</p>
+        <p><strong>Витрата пального:</strong> 7.3 л/100 км</p>
+        <p><strong>Місткість:</strong> 5 пасажирів</p>
+        <p><strong>Доступно:</strong> 5 авто</p>
+        <p><strong>Особливості:</strong> Компактний хетчбек з низьким рівнем витрат пального, просторий салон, сучасні системи безпеки та керованість на високому рівні.</p>
+        <button class="book-btn" onclick="bookCar('Ford Focus')">Забронювати</button>
+    </div>
+
+    <div id="car7Details" class="car-info">
+        <h2>Ford Mustang</h2>
+        <img src="https://www.topgear.com/sites/default/files/cars-car/image/2024/12/54196859052_9249719e93_o.jpg?w=1280&h=720" alt="Ford Mustang">
+        <p><strong>Ціна:</strong> $150/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> 5.0L V8 бензиновий</p>
+        <p><strong>Витрата пального:</strong> 12.5 л/100 км</p>
+        <p><strong>Місткість:</strong> 4 пасажири</p>
+        <p><strong>Доступно:</strong> 1 авто</p>
+        <p><strong>Особливості:</strong> Потужний спортивний автомобіль, легенда серед спортивних машин. Великі можливості для тюнінгу та налаштування, чудові показники динаміки та вражаючий дизайн.</p>
+        <button class="book-btn" onclick="bookCar('Ford Mustang')">Забронювати</button>
+    </div>
+
+    <div id="car8Details" class="car-info">
+        <h2>Ford F-150</h2>
+        <img src="https://nextcar.ua/images/blog/579/F-150-Lightning-Flash-1.jpg" alt="Ford F-150">
+        <p><strong>Ціна:</strong> $180/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> 3.5L V6 бензиновий / електричний</p>
+        <p><strong>Витрата пального:</strong> 13.2 л/100 км (бензинова версія)</p>
+        <p><strong>Місткість:</strong> 5 пасажирів</p>
+        <p><strong>Доступно:</strong> 3 авто</p>
+        <p><strong>Особливості:</strong> Потужний пікап, що поєднує в собі великі можливості для роботи та зручність для щоденних поїздок. Велика вантажопідйомність, просторий салон і сучасні технології для зручності водія.</p>
+        <button class="book-btn" onclick="bookCar('Ford F-150')">Забронювати</button>
+    </div>
+
+    <div id="car9Details" class="car-info">
+        <h2>Tesla Model S</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/2021_Tesla_Model_S_P2_Long_Range_front_right_view.jpg/800px-2021_Tesla_Model_S_P2_Long_Range_front_right_view.jpg" alt="Tesla Model S">
+        <p><strong>Ціна:</strong> $200/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> Електричний двигун</p>
+        <p><strong>Запас ходу:</strong> до 652 км (залежно від моделі)</p>
+        <p><strong>Швидкість:</strong> 0-100 км/год за 2.1 секунди (для версії Plaid)</p>
+        <p><strong>Місткість:</strong> 5 пасажирів</p>
+        <p><strong>Доступно:</strong> 2 авто</p>
+        <p><strong>Особливості:</strong> Tesla Model S - це електричний автомобіль з високою швидкістю та дальністю поїздки. Це один із найшвидших серійних автомобілів у світі, з безліччю інноваційних технологій, таких як автопілот і безперервні оновлення програмного забезпечення.</p>
+        <button class="book-btn" onclick="bookCar('Tesla Model S')">Забронювати</button>
+    </div>
+
+    <div id="car10Details" class="car-info">
+        <h2>Audi Q7</h2>
+        <img src="https://i.infocar.ua/i/12/442/1400x936.jpg" alt="Audi Q7">
+        <p><strong>Ціна:</strong> $180/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> 3.0L бензиновий</p>
+        <p><strong>Витрата пального:</strong> 9.2 л/100 км</p>
+        <p><strong>Місткість:</strong> 7 пасажирів</p>
+        <p><strong>Доступно:</strong> 3 авто</p>
+        <p><strong>Особливості:</strong> Audi Q7 – це розкішний позашляховик з високим рівнем комфорту, потужним двигуном і багатим набором технологій для безпеки і зручності водія та пасажирів. Ідеальний вибір для сімейних поїздок та подорожей на великі відстані.</p>
+        <button class="book-btn" onclick="bookCar('Audi Q7')">Забронювати</button>
+    </div>
+
+    <div id="car11Details" class="car-info">
+        <h2>Audi A4</h2>
+        <img src="https://cdn.riastatic.com/photosnew/auto/photo/Audi_A4__567333331f.jpg" alt="Audi A4">
+        <p><strong>Ціна:</strong> $180/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> 2.0L бензиновий</p>
+        <p><strong>Витрата пального:</strong> 7.5 л/100 км</p>
+        <p><strong>Місткість:</strong> 5 пасажирів</p>
+        <p><strong>Доступно:</strong> 4 авто</p>
+        <p><strong>Особливості:</strong> Audi A4 - це стильний та потужний автомобіль середнього класу, що поєднує високу продуктивність, комфорт і сучасні технології. Ідеальний для щоденних поїздок, а також для тривалих подорожей.</p>
+        <button class="book-btn" onclick="bookCar('Audi A4')">Забронювати</button>
+    </div>
+
+    <div id="car12Details" class="car-info">
+        <h2>Nissan Rogue</h2>
+        <img src="https://di-uploads-pod40.dealerinspire.com/nissanofjeffersoncity/uploads/2022/02/2022-nissan-rogue-suv-blue.png" alt="Nissan Rogue">
+        <p><strong>Ціна:</strong> $130/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> 2.5L бензиновий</p>
+        <p><strong>Витрата пального:</strong> 8.0 л/100 км</p>
+        <p><strong>Місткість:</strong> 5 пасажирів</p>
+        <p><strong>Доступно:</strong> 3 авто</p>
+        <p><strong>Особливості:</strong> Nissan Rogue - це компактний кросовер з просторим салоном і високою економічністю. Ідеальний для сімейних поїздок та подорожей по місту. Він оснащений останніми технологіями безпеки і комфорту.</p>
+        <button class="book-btn" onclick="bookCar('Nissan Rogue')">Забронювати</button>
+    </div>
+
+    <div id="car13Details" class="car-info">
+        <h2>Chevrolet Camaro</h2>
+        <img src="https://i.infocar.ua/i/12/5759/1200x800.jpg" alt="Chevrolet Camaro">
+        <p><strong>Ціна:</strong> $220/доба</p>
+        <p><strong>Трансмісія:</strong> Механіка</p>
+        <p><strong>Двигун:</strong> 6.2L V8 бензиновий</p>
+        <p><strong>Витрата пального:</strong> 13.0 л/100 км</p>
+        <p><strong>Місткість:</strong> 4 пасажири</p>
+        <p><strong>Доступно:</strong> 3 авто</p>
+        <p><strong>Особливості:</strong> Chevrolet Camaro - це спортивний автомобіль з потужним двигуном V8, який поєднує елегантність і надзвичайну продуктивність. Ідеальний для любителів швидкості та драйву, має стильний дизайн і сучасні технології.</p>
+        <button class="book-btn" onclick="bookCar('Chevrolet Camaro')">Забронювати</button>
+    </div>
+
+    <div id="car14Details" class="car-info">
+        <h2>Chevrolet Malibu</h2>
+        <img src="https://i.infocar.ua/i/2/4676/102138/1920x.jpg" alt="Chevrolet Malibu">
+        <p><strong>Ціна:</strong> $170/доба</p>
+        <p><strong>Трансмісія:</strong> Механіка</p>
+        <p><strong>Двигун:</strong> 2.5L бензиновий</p>
+        <p><strong>Витрата пального:</strong> 8.0 л/100 км</p>
+        <p><strong>Місткість:</strong> 5 пасажирів</p>
+        <p><strong>Доступно:</strong> 4 авто</p>
+        <p><strong>Особливості:</strong> Chevrolet Malibu — це комфортний середньорозмірний седан, який поєднує стиль та економічність. Має чудову прохідність, високий рівень безпеки та комфортне керування для тривалих поїздок.</p>
+        <button class="book-btn" onclick="bookCar('Chevrolet Malibu')">Забронювати</button>
+    </div>
+
+    <div id="car15Details" class="car-info">
+        <h2>Porsche 911</h2>
+        <img src="https://i.infocar.ua/i/2/7145/134665/1920x.jpg" alt="Porsche 911">
+        <p><strong>Ціна:</strong> $350/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> 3.0L 6-циліндровий турбований</p>
+        <p><strong>Витрата пального:</strong> 9.0 л/100 км</p>
+        <p><strong>Максимальна швидкість:</strong> 308 км/год</p>
+        <p><strong>Доступно:</strong> 2 авто</p>
+        <p><strong>Особливості:</strong> Porsche 911 — це класичний спорткар, який пропонує неймовірну швидкість, ефективність та стиль. Його потужний двигун і чудова динаміка роблять кожну поїздку незабутньою. Підійде для тих, хто любить швидкість і елегантний дизайн.</p>
+        <button class="book-btn" onclick="bookCar('Porsche 911')">Забронювати</button>
+    </div>
+
+    <div id="car16Details" class="car-info">
+        <h2>Lexus RX 350</h2>
+        <img src="https://media.ed.edmunds-media.com/lexus/rx/2025/oem/2025_lexus_rx_4dr-suv_350-f-sport-handling_fq_oem_1_1600.jpg" alt="Lexus RX 350">
+        <p><strong>Ціна:</strong> $250/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> 3.5L V6</p>
+        <p><strong>Витрата пального:</strong> 11.2 л/100 км</p>
+        <p><strong>Максимальна швидкість:</strong> 200 км/год</p>
+        <p><strong>Доступно:</strong> 5 авто</p>
+        <p><strong>Особливості:</strong> Lexus RX 350 поєднує елегантність та потужність. Його вишуканий дизайн та високий рівень комфорту роблять його ідеальним для подорожей на будь-які відстані. Завдяки потужному двигуну V6 та комфортному інтер'єру цей автомобіль стане чудовим вибором для водіїв, які цінують стиль і зручність.</p>
+        <button class="book-btn" onclick="bookCar('Lexus RX 350')">Забронювати</button>
+    </div>
+
+    <div id="car17Details" class="car-info">
+        <h2>Hyundai Sonata</h2>
+        <img src="https://toprent.ua/wp-content/uploads/2023/10/Hyundai-Sonata-LPG-TopRent.UA-3.jpg" alt="Hyundai Sonata">
+        <p><strong>Ціна:</strong> $140/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> 2.5L 4-циліндровий</p>
+        <p><strong>Витрата пального:</strong> 8.1 л/100 км</p>
+        <p><strong>Максимальна швидкість:</strong> 210 км/год</p>
+        <p><strong>Доступно:</strong> 6 авто</p>
+        <p><strong>Особливості:</strong> Hyundai Sonata - це елегантний седан, який поєднує стиль та економічність. Завдяки передовим технологіям та комфортному салону, він ідеально підходить для тих, хто шукає надійний автомобіль для щоденних поїздок або подорожей. Сучасний дизайн та ефективний двигун роблять Sonata привабливим варіантом для широкої аудиторії водіїв.</p>
+        <button class="book-btn" onclick="bookCar('Hyundai Sonata')">Забронювати</button>
+    </div>
+
+    <div id="car18Details" class="car-info">
+        <h2>Subaru Outback</h2>
+        <img src="https://i.infocar.ua/i/12/5454/1400x936.jpg" alt="Subaru Outback">
+        <p><strong>Ціна:</strong> $180/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> 2.5L 4-циліндровий</p>
+        <p><strong>Витрата пального:</strong> 9.0 л/100 км</p>
+        <p><strong>Максимальна швидкість:</strong> 210 км/год</p>
+        <p><strong>Доступно:</strong> 4 авто</p>
+        <p><strong>Особливості:</strong> Subaru Outback - це універсальний кросовер, який поєднує високі прохідні можливості з комфортом та надійністю. Ідеально підходить для тих, хто любить активний відпочинок і подорожі, завдяки відмінним характеристикам на бездоріжжі. Вигідна ціна та продуманий дизайн роблять Outback відмінним вибором для водіїв, які цінують практичність і комфорт.</p>
+        <button class="book-btn" onclick="bookCar('Subaru Outback')">Забронювати</button>
+    </div>
+
+    <div id="car19Details" class="car-info">
+        <h2>Mercedes-Benz E-Class</h2>
+        <img src="https://img.mercedes-benz-kiev.com/data/lineup/mercedes-benz-e-class-w214/mercedes-benz-e-class-w214-1.jpg" alt="Mercedes-Benz E-Class">
+        <p><strong>Ціна:</strong> $270/доба</p>
+        <p><strong>Трансмісія:</strong> Автомат</p>
+        <p><strong>Двигун:</strong> 3.0L V6 Турбований</p>
+        <p><strong>Витрата пального:</strong> 8.5 л/100 км</p>
+        <p><strong>Максимальна швидкість:</strong> 250 км/год</p>
+        <p><strong>Доступно:</strong> 3 авто</p>
+        <p><strong>Особливості:</strong> Mercedes-Benz E-Class - це елегантний і потужний автомобіль преміум класу, який поєднує в собі розкіш, комфорт і передові технології. Ідеальний для бізнес-подорожей і довгих поїздок, з чудовими характеристиками безпеки та витривалості. Плавна їзда та інноваційні функції роблять E-Class ідеальним вибором для тих, хто шукає клас та комфорт у кожній поїздці.</p>
+        <button class="book-btn" onclick="bookCar('Mercedes-Benz E-Class')">Забронювати</button>
+    </div>
+
+    <div id="car20Details" class="car-info">
+        <h2>Volkswagen Golf</h2>
+        <img src="https://ionity.ua/wp-content/uploads/2024/02/volkswagen-golf-2024-restyling-foto-768x432.jpg" alt="Volkswagen Golf">
+        <p><strong>Ціна:</strong> $130/доба</p>
+        <p><strong>Трансмісія:</strong> Механіка</p>
+        <p><strong>Двигун:</strong> 1.4L TSI</p>
+        <p><strong>Витрата пального:</strong> 6.0 л/100 км</p>
+        <p><strong>Максимальна швидкість:</strong> 230 км/год</p>
+        <p><strong>Доступно:</strong> 5 авто</p>
+        <p><strong>Особливості:</strong> Volkswagen Golf — це компактний і економічний автомобіль, який пропонує чудову продуктивність та комфорт. З потужним двигуном та економним споживанням пального, це ідеальний вибір для щоденних поїздок та подорожей. Його стильний дизайн і передові технології роблять Golf популярним вибором серед водіїв, які шукають поєднання ефективності та надійності.</p>
+        <button class="book-btn" onclick="bookCar('Volkswagen Golf')">Забронювати</button>
+    </div>
+
+    <div id="car21Details" class="car-info">
+        <h2>Honda Civic</h2>
+        <img src="https://topgir.com.ua/wp-content/uploads/2019/03/honda-civic-type-r_0.jpg" alt="Honda Civic">
+        <p><strong>Ціна:</strong> $140/доба</p>
+        <p><strong>Трансмісія:</strong> Механіка</p>
+        <p><strong>Двигун:</strong> 2.0L I4</p>
+        <p><strong>Витрата пального:</strong> 7.0 л/100 км</p>
+        <p><strong>Максимальна швидкість:</strong> 220 км/год</p>
+        <p><strong>Доступно:</strong> 6 авто</p>
+        <p><strong>Особливості:</strong> Honda Civic — це компактний автомобіль, який поєднує в собі стиль і продуктивність. Механічна трансмісія робить його ідеальним вибором для водіїв, які шукають контролю над кожним рухом. З простором для пасажирів та економічним споживанням пального, Civic є відмінним вибором для щоденних поїздок та подорожей. Крім того, його спортивний вигляд та висока надійність підвищують популярність серед автолюбителів.</p>
+        <button class="book-btn" onclick="bookCar('Honda Civic')">Забронювати</button>
+    </div>
+
+    </section>
+
+
+    <!-- Мої бронювання" ---------------------------------------------------------->
+    <section id="bookings">
+        <h1>Мої бронювання</h1>
+        <br>
+        <div id="myBookings">
+            <!-- Тут будуть показані заброньовані автомобілі -->
+        </div>
+        <br>
+        <div id="date-picker">
+            <label for="start-date">Дата початку:</label>
+            <input type="date" id="start-date">
+            <label for="end-date">Дата кінця:</label>
+            <input type="date" id="end-date">
+        </div>
+    </section>
+
+    <!-- Розділ "Про нас" ---------------------------------------------------------->
+    <section id="about">
+        <h1>Про нас</h1>
+        <p id="inform-us1">DriveNow – майбутнє оренди авто вже тут! </p>
+            <p id="inform-us2">🚗 Про нас:
+            DriveNow – це перша у світі платформа оренди авто, що використовує штучний інтелект для підбору ідеальної машини під ваш настрій. Наш унікальний алгоритм аналізує ваші останні повідомлення, погоду за вікном і навіть рівень кофеїну у вашій крові (якщо ви тримаєте каву поруч із телефоном), щоб підібрати авто, яке ідеально пасуватиме під ваш день.
+            
+            <br>🔋 Інновації:
+            Ми запустили першу в світі функцію "Авто-телепортації" (на стадії бета-тесту), яка дозволяє отримати авто в будь-якому місці натисканням однієї кнопки. Просто натисніть "Отримати авто", і воно з’явиться поруч із вами – ну або через 10-15 хвилин, як пощастить!
+            
+            <br>🌍 Екологічність:
+            Наша технологія "Зелений пробіг" автоматично компенсує шкідливі викиди від авто, висаджуючи одне дерево щоразу, коли ви перевищуєте швидкість. Таким чином, ви не просто їдете швидше – ви стаєте героєм планети!
+            
+            <br> 🤖 Автопілот нового рівня:
+            Ми співпрацюємо з таємною лабораторією інженерів, які створили перший автомобіль, що реагує на ваш голосовий настрій. Ви сказали "Поїхали додому" з сумним тоном? Машина поставить меланхолійну музику та вибере маршрут з найкрасивішими заходами сонця.
+            
+            <br>🚀 DriveNow – майбутнє вже сьогодні! Приєднуйтесь до нас і відчуйте, як це – жити в 2050-му році вже зараз. 😎
+            </p>
+        <p id="inform-us1">Ми надаємо послуги оренди автомобілів для будь-яких випадків. Зручний сервіс та доступні ціни.</p>
+        <p id="inform-us1">Контактні дані: 123-456-789</p>
+       
+        <iframe id="card "src="https://www.google.com/maps/embed?..." width="600" height="450"></iframe>
+    </section>
+
+    <!-- Розділ "Вхід/Реєстрація" ------------------------------------------------->
+    <section id="login">
+        <form id="login-form">
+            <h3>Вхід</h3>
+            <input type="text" id="login-username" placeholder="Логін" required>
+            <input type="password" id="login-password" placeholder="Пароль" required>
+            <button type="submit">Увійти</button>
+        </form>
+        <br>
+        <form id="register-form">
+            <h3>Реєстрація</h3>
+            <input type="text" id="register-username" placeholder="Логін" required>
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Пароль" required>
+            <button type="submit">Зареєструватися</button>
+        </form>    
+        <p id="login-status"></p>
+    </section>
+
+    <footer id="footer">
+    <p>© 2025 Оренда авто. Усі права захищені.</p>
+    </footer>
+</body>
+
+<script src="javascript.js"></script>
+
+</html>
